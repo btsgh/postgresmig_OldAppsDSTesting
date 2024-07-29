@@ -1,0 +1,32 @@
+{
+  "gitSyncId": "659d2d6b183ac635e2b6d48e_659d2d82183ac635e2b6d562",
+  "unpublishedPage": {
+    "isHidden": false,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 630.0,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0.0,
+          "minHeight": 580.0,
+          "parentColumnSpace": 1.0,
+          "parentRowSpace": 1.0,
+          "rightColumn": 1224.0,
+          "snapColumns": 64.0,
+          "snapRows": 56.0,
+          "topRow": 0.0,
+          "type": "CANVAS_WIDGET",
+          "version": 89.0,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "MainCustomWidgetTest",
+    "slug": "maincustomwidgettest"
+  }
+}

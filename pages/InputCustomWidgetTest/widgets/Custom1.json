@@ -1,0 +1,78 @@
+{
+  "bottomRow": 31,
+  "defaultModel": "{\n  \"name\": \"{{Table1.selectedRow.tagline}}\"\n}",
+  "displayName": "Custom",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    },
+    {
+      "key": "defaultModel"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "reset_widget"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "reset_widget"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "events": [
+    "reset_widget",
+    "test",
+    "onClick"
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.867bcc8399fa3f897d425d72690b86e4.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": true,
+  "key": "x8qc3t2ykh",
+  "leftColumn": 18,
+  "mobileBottomRow": 38,
+  "mobileLeftColumn": 18,
+  "mobileRightColumn": 38,
+  "mobileTopRow": 8,
+  "onClick": "{{showAlert(\"test!!!\", \"\")}}",
+  "parentColumnSpace": 14.140625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "reset_widget": "{{const handleReset = () => {\n  setCurrentIndex(0);\n  appsmith.triggerEvent(\"onResetClick\");\n};}}",
+  "rightColumn": 50,
+  "searchTags": [
+    "external"
+  ],
+  "srcDoc": {
+    "css": "body {\n  font-family: Arial, sans-serif;\n  margin: 20px;\n}\n\n#input-widget {\n  text-align: center;\n}\n\nlabel {\n  margin-right: 10px;\n}\n\ninput {\n  padding: 8px;\n  font-size: 16px;\n  margin-right: 10px;\n}\n\nbutton {\n  padding: 8px 15px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\np {\n  margin-top: 10px;\n  font-size: 18px;\n}\n",
+    "html": "<div id=\"input-widget\">\n  <label for=\"inputField\">Type Something:</label>\n  <input type=\"text\" id=\"input\">\n  <button id=\"button\" onclick=\"showInput()\">Show Input</button>\n  <p id=\"output\"></p>\n</div>",
+    "js": "appsmith.onReady(() => {\n  const input = document.getElementById('input');\n  const button = document.getElementById('button');\n  button.innerHTML = appsmith.model.name;\n  input.addEventListener(\"keyup\", () => {\n    const output = document.getElementById('output');\n    const value = input.value;\n    if (value.trim() !== '') {\n      output.textContent = `You entered: ${value}`;\n    } else {\n      output.textContent = 'Please enter something.';\n    }\n    appsmith.updateModel({\n      value: input.value\n    });\n  });\n  button.addEventListener(\"click\", () => {\n    appsmith.triggerEvent(\"on1Click\");\n  });\n  appsmith.onModelChange(model => {\n    button.innerHTML = model.name;\n  });\n});"
+  },
+  "tags": [
+    "Display"
+  ],
+  "test": "{{}}",
+  "theme": "{{appsmith.theme}}",
+  "topRow": 1,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": "body {\n  font-family: Arial, sans-serif;\n  margin: 20px;\n}\n\n#input-widget {\n  text-align: center;\n}\n\nlabel {\n  margin-right: 10px;\n}\n\ninput {\n  padding: 8px;\n  font-size: 16px;\n  margin-right: 10px;\n}\n\nbutton {\n  padding: 8px 15px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\np {\n  margin-top: 10px;\n  font-size: 18px;\n}\n",
+    "html": "<div id=\"input-widget\">\n  <label for=\"inputField\">Type Something:</label>\n  <input type=\"text\" id=\"input\">\n  <button id=\"button\" onclick=\"showInput()\">Show Input</button>\n  <p id=\"output\"></p>\n</div>",
+    "js": "appsmith.onReady(() => {\n\n  const input = document.getElementById('input');\n\t\n\tconst button = document.getElementById('button');\n\tbutton.innerHTML = appsmith.model.name;\n\t\n\tinput.addEventListener(\"keyup\", () => {\n\t\tconst output = document.getElementById('output');\n\t\tconst value = input.value;\n\t\t\n\t\tif (value.trim() !== '') {\n\t\t\toutput.textContent = `You entered: ${value}`;\n\t\t} else {\n\t\t\toutput.textContent = 'Please enter something.';\n\t }\n\t\t\n\t\t\n\t\tappsmith.updateModel({\n\t\t\tvalue: input.value\n\t\t})\n\t});  \n\t\n\tbutton.addEventListener\t(\"click\", () => {\n    appsmith.triggerEvent(\"on1Click\");\n\t});\n\t\n\tappsmith.onModelChange((model) => {\n\t\tbutton.innerHTML = model.name;\n\t});\n})\n"
+  },
+  "version": 1,
+  "widgetId": "q01eqpwhnh",
+  "widgetName": "Custom1"
+}
