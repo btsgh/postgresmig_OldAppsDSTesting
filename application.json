@@ -6,6 +6,10 @@
   "evaluationVersion": 2,
   "pages": [
     {
+      "id": "Dashboard",
+      "isDefault": false
+    },
+    {
       "id": "OAuth20",
       "isDefault": true
     },
@@ -78,7 +82,11 @@
       "isDefault": false
     },
     {
-      "id": "Sheet1",
+      "id": "GSheetsCrud",
+      "isDefault": false
+    },
+    {
+      "id": "GSheetsClone",
       "isDefault": false
     }
   ]
